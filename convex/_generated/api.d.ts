@@ -15,6 +15,10 @@ import type {
 } from "convex/server";
 import type * as auth from "../auth.js";
 import type * as http from "../http.js";
+import type * as otp_ResendOTP from "../otp/ResendOTP.js";
+import type * as otp_VerificationCodeEmail from "../otp/VerificationCodeEmail.js";
+import type * as PasswordReset_PasswordResetEmail from "../PasswordReset/PasswordResetEmail.js";
+import type * as PasswordReset_ResendOTPPasswordReset from "../PasswordReset/ResendOTPPasswordReset.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -27,6 +31,10 @@ import type * as http from "../http.js";
 declare const fullApi: ApiFromModules<{
   auth: typeof auth;
   http: typeof http;
+  "otp/ResendOTP": typeof otp_ResendOTP;
+  "otp/VerificationCodeEmail": typeof otp_VerificationCodeEmail;
+  "PasswordReset/PasswordResetEmail": typeof PasswordReset_PasswordResetEmail;
+  "PasswordReset/ResendOTPPasswordReset": typeof PasswordReset_ResendOTPPasswordReset;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,

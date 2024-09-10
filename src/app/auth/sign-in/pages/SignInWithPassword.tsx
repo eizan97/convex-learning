@@ -1,7 +1,7 @@
 import { useAuthActions } from "@convex-dev/auth/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast"; 
+import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
 export function SignInWithPassword({ provider, handleSent, handlePasswordReset }: { provider?: string; handleSent?: (email: string) => void; handlePasswordReset?: () => void }) {
@@ -38,9 +38,9 @@ export function SignInWithPassword({ provider, handleSent, handlePasswordReset }
           </Button>
         ) : null}
       </div>
-      <Input type="password" name="password" id="password" className="mb-4 " autoComplete={flow === "signIn" ? "current-password" : "new-password"} />
+      <Input type="password" name="password" id="password" autoComplete={flow === "signIn" ? "current-password" : "new-password"} className="mb-4 " /> {/* */}
       <input name="flow" value={flow} type="hidden" />
-      <Button type="submit" disabled={submitting}>
+      <Button type="submit" disabled={submitting} variant="secondary">
         {flow === "signIn" ? "Sign in" : "Sign up"}
       </Button>
       <Button

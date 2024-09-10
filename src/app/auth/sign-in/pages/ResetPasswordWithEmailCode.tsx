@@ -1,6 +1,6 @@
 import { useAuthActions } from "@convex-dev/auth/react";
 import { CodeInput } from "@/app/auth/sign-in/pages/CodeInput"; 
-import { SignInWithEmailCode } from "@/app/auth/sign-in/pages/SignInWithEmailCode"; //! not yet created
+import { SignInWithEmailCode } from "@/app/auth/sign-in/pages/SignInWithEmailCode";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast"; 
